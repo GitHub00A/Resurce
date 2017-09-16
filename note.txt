@@ -1,3 +1,4 @@
+/*some notes about Java web*/
 //js for default selected
         <script type="text/javascript">
 			var options = document.getElementById("mySelect");
@@ -9,11 +10,11 @@
         </script>
         
 //EL and JSTL for default selected  
-<select>
-<c:forEach items="${requestScope.list}" var="l" varStatus="status">
-<option>not done</option>
-</c:forEach>
-</select>
+	<select>
+	    <c:forEach items="${requestScope.list}" var="l" varStatus="status">
+			<option>${l}</option>
+	     </c:forEach>
+	</select>
 
 //when choose sex
 ${requestScope.customer.sex=="man"?"checked":""}
