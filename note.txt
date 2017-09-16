@@ -11,7 +11,7 @@
 //EL and JSTL for default selected  
 <select>
 <c:forEach items="${requestScope.list}" var="l" varStatus="status">
-<option></option>
+<option>not done</option>
 </c:forEach>
 </select>
 
