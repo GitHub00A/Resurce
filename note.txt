@@ -1,0 +1,9 @@
+//js for default select
+<script type="text/javascript">
+				var options = document.getElementById("mySelect");
+				for(var i=0;i<options.length;i++){
+					 if(options[i].value==<%=emp.getDeptno()%>) {
+			     options[i].selected = true;
+	      	}
+	    }
+</script>
