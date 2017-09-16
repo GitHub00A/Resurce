@@ -1,9 +1,20 @@
-//js for default select
-<script type="text/javascript">
-				var options = document.getElementById("mySelect");
-				for(var i=0;i<options.length;i++){
-					 if(options[i].value==<%=emp.getDeptno()%>) {
-			     options[i].selected = true;
-	      	}
-	    }
-</script>
+//js for default selected
+        <script type="text/javascript">
+			var options = document.getElementById("mySelect");
+			for(var i=0;i<options.length;i++){
+			  if(options[i].value==<%=emp.getDeptno()%>) {
+			  options[i].selected = true;
+	      	        }
+	            }
+        </script>
+        
+//EL and JSTL for default selected  
+<select>
+<c:forEach items="${requestScope.list}" var="l" varStatus="status">
+<option></option>
+</c:forEach>
+</select>
+
+//when choose sex
+${requestScope.customer.sex=="man"?"checked":""}
+${requestScope.customer.sex=="woman"?"checked":""}
