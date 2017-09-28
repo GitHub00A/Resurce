@@ -10,11 +10,21 @@
         </script>
         
 //EL and JSTL for default selected  
+      DEMO one:
 	<select>
 	    <c:forEach items="${requestScope.list}" var="l" varStatus="status">
 			<option>${l}</option>
 	     </c:forEach>
 	</select>
+      DEMO two:
+        <select name="organId" id="selectOrgan">
+	    <option value="-1">请选择税务机关</option>
+	     <c:forEach items="${requestScope.list}" var="l" varStatus="status">
+		<option value="${status.index+1}" ${requestScope.taxer.organId==l.id?"selected":"" }>${l.organName }        
+                 </option>
+	     </c:forEach>
+	</select>
+
 
 //when choose sex
 ${requestScope.customer.sex=="man"?"checked":""}
